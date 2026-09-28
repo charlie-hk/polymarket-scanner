@@ -1,0 +1,77 @@
+time,type,title,slug,legs,sum_ask,edge_pct,book_edge_pct,days,annual,catch_all,price,ch1h,ch1d,bid,ask,spread,liq,vol24
+2026-09-28 14:26:22 UTC,multi,GPU rental prices (H100) end of October?,gpu-rental-prices-h100-end-of-october,6,0.9380000000000001,6.199999999999994,-15.232556937019993,33.5643187637037,-165.6486258861517,False,,,,,,,,1499.18
+2026-09-28 14:26:23 UTC,multi,Maduro Prison Time?,maduro-prison-time-527,5,0.943,5.700000000000005,0.82735906024062,459.6059837450926,0.6570542326866534,False,,,,,,,,584.900349
+2026-09-28 14:26:23 UTC,multi,How low will Lake Powell drop?,how-low-will-lake-powell-drop-1786980780361,4,0.957,4.300000000000004,4.182597922265612,199.5643165190625,7.6499058962834265,False,,,,,,,,386.95
+2026-09-28 14:26:22 UTC,multi,ECB Interest Rates: December 2026,ecb-interest-rates-december-2026,5,0.983,1.7000000000000015,-4.5640341927978225,79.89765273767361,-20.850080362695156,True,,,,,,,,2229.822168
+2026-09-28 14:26:22 UTC,multi,GPU rental prices (H100) end of 2026?,gpu-rental-prices-h100-end-of-2026-20260709164334623,7,0.984,1.6000000000000014,-12.023106955004486,94.6059840638426,-46.38643191550343,False,,,,,,,,712.85
+2026-09-28 14:26:22 UTC,multi,How many cities will Waymo operate in by December 31?,how-many-cities-will-waymo-operate-in-by-december-31-20260626203648850,7,0.986,1.4000000000000012,0.42247736226305144,94.60598482099537,1.6299628138514142,False,,,,,,,,1000.0
+2026-09-28 14:26:22 UTC,multi,GPU rental prices (H200) end of October?,gpu-rental-prices-h200-end-of-october,6,0.99,1.0000000000000009,-0.3444991010575588,33.56431902986111,-3.746304871376659,False,,,,,,,,1894.637827
+2026-09-28 14:26:22 UTC,multi,GDP growth in 2026,gdp-growth-in-2026,6,0.994,0.6000000000000005,-0.21493702564674522,122.39834846152777,-0.6409564781482409,False,,,,,,,,7612.262421000001
+2026-09-28 14:26:44 UTC,mover,Mouilleron-le-Captif: Mathys Erhard vs Alberto Barroso Campos,atp-erhard-campos-2026-09-28,,,,,,,,0.105,-0.76,,,,,,52164.031203
+2026-09-28 14:26:44 UTC,mover,Bari: Buvaysar Gadamauri vs Enrico Dalla Valle,atp-gadamau-valle-2026-09-28,,,,,,,,0.635,0.36,0.27,,,,,45709.545981999996
+2026-09-28 14:26:44 UTC,mover,Counter-Strike: NIP vs GamerLegion - Map 1 Winner,cs2-nip-gl1-2026-09-28,,,,,,,,0.165,-0.305,,,,,,24892.282508
+2026-09-28 14:26:44 UTC,mover,"Will the price of Bitcoin be above $84,000 on September 28?",bitcoin-above-on-september-28-2026,,,,,,,,0.165,-0.01,-0.59,,,,,114919.49487200001
+2026-09-28 14:26:44 UTC,mover,Curitiba: Samuel Heredia vs Juan Sebastian Osorio,atp-heredia-osorio-2026-09-28,,,,,,,,0.785,0.22,,,,,,29794.362610000004
+2026-09-28 14:26:44 UTC,mover,Porto 2: Michael Mmoh vs Laslo Djere,atp-mmoh-djere-2026-09-28,,,,,,,,0.385,-0.19,-0.19,,,,,70746.636854
+2026-09-28 14:26:44 UTC,mover,M15 Telavi: Andrea Fiorentini vs Artur Kukasian,itf-fioren1-kukasi1-2026-09-28,,,,,,,,0.76,0.185,0.26,,,,,218529.213253
+2026-09-28 14:26:44 UTC,mover,"Will Elon Musk post 40-64 tweets from September 26 to September 28, 2026?",elon-musk-of-tweets-september-26-september-28-2026,,,,,,,,0.385,-0.17,-0.31,,,,,129461.92693900001
+2026-09-28 14:26:44 UTC,mover,"Will Elon Musk post 65-89 tweets from September 26 to September 28, 2026?",elon-musk-of-tweets-september-26-september-28-2026,,,,,,,,0.625,0.17,0.41,,,,,126832.64125100001
+2026-09-28 14:26:44 UTC,mover,Adana: Ksenia Efremova vs Martyna Kubka,wta-efremov-kubka-2026-09-28,,,,,,,,0.2,-0.145,,,,,,27348.330376
+2026-09-28 14:26:44 UTC,mover,"Next US-Iran senior diplomatic meeting by October 31, 2026? (copy)",next-us-iran-senior-diplomatic-meeting-byptptpt,,,,,,,,0.655,-0.085,0.34,,,,,32716.556604999994
+2026-09-28 14:26:44 UTC,mover,Counter-Strike: Leo Team vs Noir Verse (BO3) - CCT Europe Series #10 Group Stage,cs2-leo2-noirve-2026-09-28,,,,,,,,0.255,-0.135,,,,,,69213.32844
+2026-09-28 14:26:44 UTC,mover,Bari: Lorenzo Angelini vs Garrett Johns,atp-angelin-johns-2026-09-28,,,,,,,,0.265,-0.13,-0.125,,,,,24607.337949999997
+2026-09-28 14:26:44 UTC,mover,"Next US-Iran senior diplomatic meeting by September 30, 2026?",next-us-iran-senior-diplomatic-meeting-byptptpt,,,,,,,,0.46,-0.12,0.295,,,,,59162.663448000065
+2026-09-28 14:26:44 UTC,mover,"Will Elon Musk post 160-179 tweets from September 22 to September 29, 2026?",elon-musk-of-tweets-september-22-september-29-2026,,,,,,,,0.036,-0.029,-0.279,,,,,60901.784586
+2026-09-28 14:26:44 UTC,spread,Eagles vs. Bears: 1Q Moneyline,nfl-phi-chi-2026-09-29,,,,,,,,,,,0.07,0.59,0.52,5770.91,0.0
+2026-09-28 14:26:44 UTC,spread,"Will Hyperliquid dip to $75 by December 31, 2026?",what-price-will-hyperliquid-hit-before-2027,,,,,,,,,,,0.328,0.84,0.512,9488.02461,0.0
+2026-09-28 14:26:44 UTC,spread,Fed rate cut by July 2027 meeting?,fed-rate-cut-by-629,,,,,,,,,,,0.21,0.67,0.4600000000000001,5670.6773,0.0
+2026-09-28 14:26:44 UTC,spread,"Will Ethereum hit $4k by December 31, 2027?",when-will-ethereum-hit-4k,,,,,,,,,,,0.41,0.77,0.36000000000000004,5999.694,0.0
+2026-09-28 14:26:44 UTC,spread,Will South Korea ETF (EWY) hit (HIGH) $188 in September?,what-price-will-ewy-hit-in-september-2026,,,,,,,,,,,0.15,0.51,0.36,19349.948,454.02
+2026-09-28 14:26:44 UTC,spread,Exact Score: Any Other Score?,unl-esp-hrv-2026-09-29-exact-score,,,,,,,,,,,0.02,0.34,0.32,5350.391,0.0
+2026-09-28 14:26:44 UTC,spread,Kalif Raymond: Receptions O/U 3.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.33,0.31,5004.3,0.0
+2026-09-28 14:26:44 UTC,spread,D'Andre Swift: Rushing Yards O/U 79.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.31,0.29,5046.2598,0.0
+2026-09-28 14:26:44 UTC,spread,Will South Korea ETF (EWY) hit (LOW) $180 in September?,what-price-will-ewy-hit-in-september-2026,,,,,,,,,,,0.6,0.88,0.28,17748.0527,0.0
+2026-09-28 14:26:44 UTC,spread,Will the Nebraska 2026 Senate race be within 5%?,which-senate-races-will-be-within-5-20260727153827321,,,,,,,,,,,0.44,0.7,0.25999999999999995,9023.0113,108.8
+2026-09-28 14:26:44 UTC,spread,D'Andre Swift: Receiving Yards O/U 24.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.26,0.24000000000000002,5757.4985,0.0
+2026-09-28 14:26:44 UTC,spread,Kyle Monangai: Rushing Yards O/U 59.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.25,0.23,5851.6382,0.0
+2026-09-28 14:26:44 UTC,spread,D'Andre Swift: Rushing Yards O/U 89.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.23,0.21000000000000002,5910.0477,0.0
+2026-09-28 14:26:44 UTC,spread,LoL: Solary vs DN SOOPers Challengers - Game 1 Winner,lol-sly-dnsc-2026-09-30,,,,,,,,,,,0.58,0.77,0.19000000000000006,6044.5489,20.25532
+2026-09-28 14:26:44 UTC,spread,Counter-Strike: NIP vs GamerLegion - Map 4 Winner,cs2-nip-gl1-2026-09-28,,,,,,,,,,,0.48,0.66,0.18000000000000005,6474.57,0.0
+2026-09-28 14:28:21 UTC,multi,GPU rental prices (H100) end of October?,gpu-rental-prices-h100-end-of-october,6,0.9380000000000001,6.199999999999994,-17.92526225135766,33.562948960104166,-194.93879186607802,False,,,,,,,,1499.18
+2026-09-28 14:28:21 UTC,multi,Maduro Prison Time?,maduro-prison-time-527,5,0.943,5.700000000000005,1.1035145300410545,459.60461412300924,0.8763680587357714,False,,,,,,,,584.900349
+2026-09-28 14:28:21 UTC,multi,How low will Lake Powell drop?,how-low-will-lake-powell-drop-1786980780361,4,0.957,4.300000000000004,4.182597922265612,199.56294657082177,7.649958410917553,False,,,,,,,,386.95
+2026-09-28 14:28:21 UTC,multi,GPU rental prices (H100) end of 2026?,gpu-rental-prices-h100-end-of-2026-20260709164334623,7,0.984,1.6000000000000014,-12.630310799321709,94.6046145415625,-48.729794673251284,False,,,,,,,,712.85
+2026-09-28 14:28:21 UTC,multi,How many cities will Waymo operate in by December 31?,how-many-cities-will-waymo-operate-in-by-december-31-20260626203648850,7,0.986,1.4000000000000012,0.42247736226305144,94.60461524855324,1.629986410503075,False,,,,,,,,1000.0
+2026-09-28 14:28:21 UTC,multi,How many cities will Waymo operate in by December 31?,how-many-cities-will-waymo-operate-in-by-december-31-20260626203648850,7,0.986,1.4000000000000012,0.42247736226305144,94.60461521716435,1.6299864110438889,False,,,,,,,,1000.0
+2026-09-28 14:28:21 UTC,multi,GPU rental prices (H200) end of October?,gpu-rental-prices-h200-end-of-october,6,0.99,1.0000000000000009,-0.14547805302456457,33.5629492619213,-1.5820865127073285,False,,,,,,,,1894.637827
+2026-09-28 14:28:21 UTC,multi,GDP growth in 2026,gdp-growth-in-2026,6,0.994,0.6000000000000005,-0.21493702564674522,122.39697857924769,-0.640963651813244,False,,,,,,,,7612.262421000001
+2026-09-28 14:28:41 UTC,mover,Mouilleron-le-Captif: Mathys Erhard vs Alberto Barroso Campos,atp-erhard-campos-2026-09-28,,,,,,,,0.105,-0.76,,,,,,52164.031203
+2026-09-28 14:28:41 UTC,mover,Bari: Buvaysar Gadamauri vs Enrico Dalla Valle,atp-gadamau-valle-2026-09-28,,,,,,,,0.635,0.36,0.27,,,,,45709.545981999996
+2026-09-28 14:28:41 UTC,mover,Counter-Strike: NIP vs GamerLegion - Map 1 Winner,cs2-nip-gl1-2026-09-28,,,,,,,,0.165,-0.305,,,,,,24892.282508
+2026-09-28 14:28:41 UTC,mover,"Will the price of Bitcoin be above $84,000 on September 28?",bitcoin-above-on-september-28-2026,,,,,,,,0.165,-0.01,-0.59,,,,,114919.49487200001
+2026-09-28 14:28:41 UTC,mover,Curitiba: Samuel Heredia vs Juan Sebastian Osorio,atp-heredia-osorio-2026-09-28,,,,,,,,0.785,0.22,,,,,,29794.362610000004
+2026-09-28 14:28:41 UTC,mover,Porto 2: Michael Mmoh vs Laslo Djere,atp-mmoh-djere-2026-09-28,,,,,,,,0.385,-0.19,-0.19,,,,,70746.636854
+2026-09-28 14:28:41 UTC,mover,M15 Telavi: Andrea Fiorentini vs Artur Kukasian,itf-fioren1-kukasi1-2026-09-28,,,,,,,,0.76,0.185,0.26,,,,,218529.213253
+2026-09-28 14:28:41 UTC,mover,"Will Elon Musk post 40-64 tweets from September 26 to September 28, 2026?",elon-musk-of-tweets-september-26-september-28-2026,,,,,,,,0.385,-0.17,-0.31,,,,,129461.92693900001
+2026-09-28 14:28:41 UTC,mover,"Will Elon Musk post 65-89 tweets from September 26 to September 28, 2026?",elon-musk-of-tweets-september-26-september-28-2026,,,,,,,,0.625,0.17,0.41,,,,,126832.64125100001
+2026-09-28 14:28:41 UTC,mover,Adana: Ksenia Efremova vs Martyna Kubka,wta-efremov-kubka-2026-09-28,,,,,,,,0.2,-0.145,,,,,,27348.330376
+2026-09-28 14:28:41 UTC,mover,"Next US-Iran senior diplomatic meeting by October 31, 2026? (copy)",next-us-iran-senior-diplomatic-meeting-byptptpt,,,,,,,,0.655,-0.085,0.34,,,,,32716.556604999994
+2026-09-28 14:28:41 UTC,mover,Counter-Strike: Leo Team vs Noir Verse (BO3) - CCT Europe Series #10 Group Stage,cs2-leo2-noirve-2026-09-28,,,,,,,,0.255,-0.135,,,,,,69213.32844
+2026-09-28 14:28:41 UTC,mover,Bari: Lorenzo Angelini vs Garrett Johns,atp-angelin-johns-2026-09-28,,,,,,,,0.265,-0.13,-0.125,,,,,24607.337949999997
+2026-09-28 14:28:41 UTC,mover,"Next US-Iran senior diplomatic meeting by September 30, 2026?",next-us-iran-senior-diplomatic-meeting-byptptpt,,,,,,,,0.46,-0.12,0.295,,,,,59162.663448000065
+2026-09-28 14:28:41 UTC,mover,"Will Elon Musk post 160-179 tweets from September 22 to September 29, 2026?",elon-musk-of-tweets-september-22-september-29-2026,,,,,,,,0.036,-0.029,-0.279,,,,,60901.784586
+2026-09-28 14:28:41 UTC,spread,Eagles vs. Bears: 1Q Moneyline,nfl-phi-chi-2026-09-29,,,,,,,,,,,0.07,0.59,0.52,5770.91,0.0
+2026-09-28 14:28:41 UTC,spread,"Will Hyperliquid dip to $75 by December 31, 2026?",what-price-will-hyperliquid-hit-before-2027,,,,,,,,,,,0.328,0.84,0.512,9487.39563,0.0
+2026-09-28 14:28:41 UTC,spread,Will South Korea ETF (EWY) hit (HIGH) $190 in September?,what-price-will-ewy-hit-in-september-2026,,,,,,,,,,,0.3,0.77,0.47000000000000003,18164.3001,0.0
+2026-09-28 14:28:41 UTC,spread,Fed rate cut by July 2027 meeting?,fed-rate-cut-by-629,,,,,,,,,,,0.21,0.67,0.4600000000000001,5670.6773,0.0
+2026-09-28 14:28:41 UTC,spread,"Will Ethereum hit $4k by December 31, 2027?",when-will-ethereum-hit-4k,,,,,,,,,,,0.41,0.77,0.36000000000000004,5999.694,0.0
+2026-09-28 14:28:41 UTC,spread,Exact Score: Any Other Score?,unl-esp-hrv-2026-09-29-exact-score,,,,,,,,,,,0.02,0.34,0.32,5350.391,0.0
+2026-09-28 14:28:41 UTC,spread,Kalif Raymond: Receptions O/U 3.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.33,0.31,5004.3,0.0
+2026-09-28 14:28:41 UTC,spread,D'Andre Swift: Rushing Yards O/U 79.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.31,0.29,5046.2598,0.0
+2026-09-28 14:28:41 UTC,spread,Will the Nebraska 2026 Senate race be within 5%?,which-senate-races-will-be-within-5-20260727153827321,,,,,,,,,,,0.44,0.7,0.25999999999999995,9024.1891,108.8
+2026-09-28 14:28:41 UTC,spread,D'Andre Swift: Receiving Yards O/U 24.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.26,0.24000000000000002,5757.4985,0.0
+2026-09-28 14:28:41 UTC,spread,Kyle Monangai: Rushing Yards O/U 59.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.25,0.23,5851.6382,0.0
+2026-09-28 14:28:41 UTC,spread,D'Andre Swift: Rushing Yards O/U 89.5,nfl-phi-chi-2026-09-29-player-props,,,,,,,,,,,0.02,0.23,0.21000000000000002,5910.0477,0.0
+2026-09-28 14:28:41 UTC,spread,LoL: Solary vs DN SOOPers Challengers - Game 1 Winner,lol-sly-dnsc-2026-09-30,,,,,,,,,,,0.58,0.77,0.19000000000000006,6044.5489,20.25532
+2026-09-28 14:28:41 UTC,spread,Counter-Strike: NIP vs GamerLegion - Map 4 Winner,cs2-nip-gl1-2026-09-28,,,,,,,,,,,0.48,0.66,0.18000000000000005,6474.57,0.0
+2026-09-28 14:28:41 UTC,spread,Will the Alaska 2026 Senate race be within 5%?,which-senate-races-will-be-within-5-20260727153827321,,,,,,,,,,,0.57,0.75,0.18000000000000005,11157.4524,20.081699
