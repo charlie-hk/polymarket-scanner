@@ -79,4 +79,4 @@ For research and education. Not financial advice.
 
 I build custom trading and market-data tools: prediction-market scanners, crypto bots (exchange APIs, Telegram), and MetaTrader 5 Expert Advisors.
 
-Contact: [Telegram](https://t.me/Charlie_hk1)
+Contact: Available for custom work on Upwork and Freelancer.com.
