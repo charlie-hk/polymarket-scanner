@@ -2,6 +2,8 @@
 
 ![Polymarket Scanner](cover.png)
 
+**[Live demo](https://claude.ai/artifact/9v9w5XvgCzsji2fNX6kPtH)** — a captured snapshot of the scanner's output (multi-outcome, binary and movers checks).
+
 A read-only scanner for [Polymarket](https://polymarket.com) prediction markets. It watches every active event, finds pricing inefficiencies, verifies them on the live order book, and sends alerts to **Telegram**.
 
 No wallet, no API key, no trading. It only reads public market data.
