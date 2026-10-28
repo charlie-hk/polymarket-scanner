@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polymarket Scanner — Demo</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #11141b;
+    --line: #232834;
+    --fg: #e7e9ee;
+    --muted: #8b93a3;
+    --ok: #3ecf8e;
+    --bad: #ef5a6f;
+    --accent: #6ea8fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: clamp(16px, 4vw, 40px); }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 600; margin: 4px 0 8px; }
+  .sub { color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 16px; margin-bottom: 20px; }
+  .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .tile-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .tile-value { font-size: 28px; font-variant-numeric: tabular-nums; }
+  .tile-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .callout {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 18px; color: var(--muted); font-size: 14px; margin-bottom: 24px;
+  }
+  .callout a, .sub a { color: var(--accent); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 20px; }
+  .card-title { font-weight: 600; font-size: 16px; }
+  .card-note { font-size: 13px; color: var(--muted); margin: 2px 0 12px; }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 500; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.wrap { white-space: normal; min-width: 14rem; }
+  tr:last-child td { border-bottom: none; }
+  .up { color: var(--ok); }
+  .down { color: var(--bad); }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Read-only scan, captured snapshot</div>
+  <h1>Polymarket Scanner</h1>
+  <p class="sub">A sample of what the scanner finds on Polymarket: candidates in a full outcome set, high-volume Yes/No markets, and the sharpest 1h/24h price moves. See the <a href="https://github.com/charlie-hk/polymarket-scanner">source on GitHub</a>.</p>
+
+  <div class="tiles">
+    <div class="tile">
+      <div class="tile-label">Markets in this snapshot</div>
+      <div class="tile-value" id="tile-count">—</div>
+      <div class="tile-note">Across the three checks below</div>
+    </div>
+    <div class="tile">
+      <div class="tile-label">Biggest 1h move</div>
+      <div class="tile-value" id="tile-mover">—</div>
+      <div class="tile-note" id="tile-mover-note">—</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    This is a captured snapshot, not a live feed — Polymarket's API can't be queried from a static page. For live results, clone the repo and run <code>python polymarket_scanner.py</code>.
+  </div>
+
+  <div class="card">
+    <div class="card-title">Full outcome set: next Israeli Prime Minister</div>
+    <div class="card-note">A negRisk market: exactly one candidate resolves Yes, so the scanner checks whether buying every "Yes" costs less than $1.</div>
+    <div class="table-scroll">
+      <table id="t-multi">
+        <thead><tr>
+          <th>Candidate</th><th>Bid</th><th>Ask</th><th>1h</th><th>24h</th><th>Liquidity</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">High-volume Yes/No markets</div>
+    <div class="card-note">The scanner flags a binary market when ask(Yes) + ask(No) drops below $1. Most liquid markets price this correctly, which is expected.</div>
+    <div class="table-scroll">
+      <table id="t-binary">
+        <thead><tr>
+          <th>Market</th><th>Yes</th><th>Bid</th><th>Ask</th><th>24h volume</th><th>1h</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Sharpest price moves</div>
+    <div class="card-note">Markets with the largest 1h or 24h price change, an early signal that news is hitting the market.</div>
+    <div class="table-scroll">
+      <table id="t-movers">
+        <thead><tr>
+          <th>Market</th><th>Price</th><th>1h</th><th>24h</th><th>24h volume</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    Source: <a href="https://github.com/charlie-hk/polymarket-scanner" target="_blank" rel="noopener">github.com/charlie-hk/polymarket-scanner</a>
+  </footer>
+</div>
+
+<script>
+const MULTI = [
+  {"candidate": "Benjamin Netanyahu", "bestBid": 0.48, "bestAsk": 0.49, "oneHourChange": 0.06, "oneDayChange": 0.21, "liquidity": 419073.62},
+  {"candidate": "Gadi Eizenkot", "bestBid": 0.338, "bestAsk": 0.34, "oneHourChange": -0.063, "oneDayChange": -0.2075, "liquidity": 145606.45},
+  {"candidate": "Naftali Bennett", "bestBid": 0.05, "bestAsk": 0.07, "oneHourChange": -0.005, "oneDayChange": -0.035, "liquidity": 167015.19},
+  {"candidate": "Avigdor Lieberman", "bestBid": 0.024, "bestAsk": 0.027, "oneHourChange": -0.0045, "oneDayChange": 0.0055, "liquidity": 136570.03},
+  {"candidate": "Benny Gantz", "bestBid": null, "bestAsk": 0.002, "oneHourChange": null, "oneDayChange": null, "liquidity": 90976.03},
+  {"candidate": "Yair Lapid", "bestBid": null, "bestAsk": 0.001, "oneHourChange": null, "oneDayChange": -0.0005, "liquidity": 112114.59}
+];
+const BINARY = [
+  {"question": "No change in Fed interest rates after the October 2026 meeting?", "bestBid": 0.939, "bestAsk": 0.94, "yesPrice": 0.9395, "volume24h": 3749755.92, "oneHourChange": 0.013},
+  {"question": "Fed increases interest rates by 25 bps after the October 2026 meeting?", "bestBid": 0.05, "bestAsk": 0.06, "yesPrice": 0.055, "volume24h": 2172832.98, "oneHourChange": -0.02},
+  {"question": "Fed increases interest rates by 50+ bps after the October 2026 meeting?", "bestBid": 0.003, "bestAsk": 0.004, "yesPrice": 0.0035, "volume24h": 1306966.66, "oneHourChange": null},
+  {"question": "Fed decreases interest rates by 25 bps after the October 2026 meeting?", "bestBid": null, "bestAsk": 0.001, "yesPrice": 0.0005, "volume24h": 1126443.75, "oneHourChange": null},
+  {"question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?", "bestBid": 0.21, "bestAsk": 0.22, "yesPrice": 0.215, "volume24h": 3143295.28, "oneHourChange": -0.05},
+  {"question": "Will Likud win the most seats in the 2026 Israeli legislative election?", "bestBid": 0.23, "bestAsk": 0.24, "yesPrice": 0.235, "volume24h": 861852.75, "oneHourChange": -0.04},
+  {"question": "France declares state of emergency by December 31, 2026?", "bestBid": 0.07, "bestAsk": 0.08, "yesPrice": 0.075, "volume24h": 896783.16, "oneHourChange": -0.01},
+  {"question": "2026 Balance of Power: Other", "bestBid": 0.001, "bestAsk": 0.002, "yesPrice": 0.0015, "volume24h": 857092.22, "oneHourChange": null}
+];
+const MOVERS = [
+  {"market": "Swiss Indoors Basel: Hubert Hurkacz vs Zizou Bergs", "price": 0.9995, "oneHourChange": 0.6845, "oneDayChange": 0.4045, "volume24h": 649810.50},
+  {"market": "Counter-Strike: Liquid vs Aurora Gaming (BO3)", "price": 0.324, "oneHourChange": 0.159, "oneDayChange": null, "volume24h": 975159.13},
+  {"market": "Will Benjamin Netanyahu be the next Prime Minister of Israel?", "price": 0.215, "oneHourChange": -0.05, "oneDayChange": -0.05, "volume24h": 3143295.28},
+  {"market": "Gadi Eizenkot (Israel PM candidate)", "price": 0.339, "oneHourChange": -0.063, "oneDayChange": -0.2075, "volume24h": null},
+  {"market": "France declares state of emergency by December 31, 2026?", "price": 0.075, "oneHourChange": -0.01, "oneDayChange": -0.1, "volume24h": 896783.16}
+];
+
+const fmtPrice = (v) => (v === null || v === undefined) ? '—' : v.toFixed(3);
+const fmtPct = (v) => {
+  if (v === null || v === undefined) return '—';
+  const pct = v * 100;
+  const sign = pct > 0 ? '+' : '';
+  return sign + pct.toFixed(1) + '¢';
+};
+const fmtUsd = (v) => (v === null || v === undefined) ? '—' : '$' + Math.round(v).toLocaleString('en-US');
+const pctClass = (v) => (v === null || v === undefined) ? '' : (v > 0 ? 'up' : (v < 0 ? 'down' : ''));
+
+function renderTable(tableId, rows, columns) {
+  const tbody = document.querySelector('#' + tableId + ' tbody');
+  rows.forEach((row) => {
+    const tr = document.createElement('tr');
+    columns.forEach((col) => {
+      const td = document.createElement('td');
+      const val = row[col.field];
+      td.textContent = col.fmt ? col.fmt(val) : (val ?? '—');
+      const c = col.cls ? col.cls(val) : '';
+      if (c) td.className = c;
+      if (col.wrap) td.classList.add('wrap');
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+}
+
+renderTable('t-multi', MULTI, [
+  {field: 'candidate', wrap: true},
+  {field: 'bestBid', fmt: fmtPrice},
+  {field: 'bestAsk', fmt: fmtPrice},
+  {field: 'oneHourChange', fmt: fmtPct, cls: pctClass},
+  {field: 'oneDayChange', fmt: fmtPct, cls: pctClass},
+  {field: 'liquidity', fmt: fmtUsd},
+]);
+renderTable('t-binary', BINARY, [
+  {field: 'question', wrap: true},
+  {field: 'yesPrice', fmt: fmtPrice},
+  {field: 'bestBid', fmt: fmtPrice},
+  {field: 'bestAsk', fmt: fmtPrice},
+  {field: 'volume24h', fmt: fmtUsd},
+  {field: 'oneHourChange', fmt: fmtPct, cls: pctClass},
+]);
+renderTable('t-movers', MOVERS, [
+  {field: 'market', wrap: true},
+  {field: 'price', fmt: fmtPrice},
+  {field: 'oneHourChange', fmt: fmtPct, cls: pctClass},
+  {field: 'oneDayChange', fmt: fmtPct, cls: pctClass},
+  {field: 'volume24h', fmt: fmtUsd},
+]);
+
+document.getElementById('tile-count').textContent = MULTI.length + BINARY.length + MOVERS.length;
+const topMover = MOVERS.reduce((a, b) => Math.abs(b.oneHourChange || 0) > Math.abs(a.oneHourChange || 0) ? b : a);
+const tm = document.getElementById('tile-mover');
+tm.textContent = fmtPct(topMover.oneHourChange);
+tm.className = 'tile-value ' + pctClass(topMover.oneHourChange);
+document.getElementById('tile-mover-note').textContent = topMover.market;
+</script>
+</body>
+</html>
