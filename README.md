@@ -1,5 +1,7 @@
 # Polymarket Scanner
 
+![Polymarket Scanner](cover.png)
+
 A read-only scanner for [Polymarket](https://polymarket.com) prediction markets. It watches every active event, finds pricing inefficiencies, verifies them on the live order book, and sends alerts to **Telegram**.
 
 No wallet, no API key, no trading. It only reads public market data.
